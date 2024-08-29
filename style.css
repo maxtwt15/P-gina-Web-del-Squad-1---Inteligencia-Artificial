@@ -447,4 +447,165 @@ a {
 }
 
 
+/* CSS de Tendencias Futuras */
+.gradient-textt {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(to right, yellow, red, gold, navy, purple);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    margin-bottom: 20px;
+}
 
+/*Banner*/
+header img {
+    border: 5px solid transparent;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ffcc00, #ff0000, #00ff00, #0000ff, #800080);
+    background-clip: padding-box;
+    position: relative;
+    z-index: 1;
+}
+
+header img::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ffcc00, #ff0000, #00ff00, #0000ff, #800080);
+    z-index: -1;
+    border-radius: 5px;
+    filter: blur(5px);
+    animation: borderAnimation 5s linear infinite;
+}
+
+@keyframes borderAnimation {
+    0% { 
+        box-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00, 0 0 15px #ff0000, 0 0 20px #ff0000, 0 0 25px #00ff00, 0 0 30px #00ff00, 0 0 35px #0000ff, 0 0 40px #0000ff, 0 0 45px #800080;
+    }
+    100% {
+        box-shadow: 0 0 5px #800080, 0 0 10px #800080, 0 0 15px #0000ff, 0 0 20px #0000ff, 0 0 25px #00ff00, 0 0 30px #00ff00, 0 0 35px #ff0000, 0 0 40px #ff0000, 0 0 45px #ffcc00;
+    }
+}
+
+/*CSS Imagen IA*/
+#futuro-ia {
+    text-align: center;
+    margin-bottom: 40px; /* Espacio inferior entre secciones */
+}
+
+#futuro-ia img {
+    max-width: 80%;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#horizonte-ia {
+    display: flex;
+    align-items: flex-start;
+    margin-top: 40px; /* Espacio superior entre secciones */
+}
+
+#horizonte-ia img {
+    flex: 1;
+    max-width: 40%;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+#horizonte-ia div {
+    flex: 2;
+}
+
+#horizonte-ia h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#horizonte-ia ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+#horizonte-ia ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+
+/*hr*/
+.styled-hr {
+    border: none;
+    border-top: 2px solid transparent;
+    background: linear-gradient(to right, #d3d3d3, #c0c0c0, #a9a9a9, #dcdcdc);
+    height: 2px;
+    margin: 80px 0;
+}
+
+/* gradient-text ¿Qué nos espera en el horizonte de la IA?*/
+.gradient-text {
+    background: linear-gradient(135deg, #d3d3d3, #c0c0c0, #a9a9a9, #dcdcdc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold; /* Opcional, para hacer el texto más destacable */
+}
+
+/*h2 Pero... ¿todo es color de rosa?*/
+h2.gradient-pink {
+    background: linear-gradient(to right, #ff66b2, #ff99cc, #ff66b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+/*ul list Pero... ¿todo es color de rosa?*/
+.styled-list {
+    list-style-type: none; /* Quita las viñetas por defecto */
+    padding-left: 0; /* Elimina el padding izquierdo */
+}
+
+.styled-list li {
+    margin-bottom: 15px; /* Añade espacio entre los elementos de la lista */
+    background: 333; /* Fondo suave rosa */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 5px rgba(255, 105, 180, 0.5); /* Sombra rosa */
+}
+
+.styled-list li strong {
+    color: #ff66b2; /* Color rosa para el texto en negrita */
+}
+
+
+/* titulo Cómo enfrentamos estos desafíos?*/
+h2.gradient-gold {
+    font-size: 2rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ffcc00, #ffb300);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 1px #ffcc00, 0 0 2px #ffb300;
+}
+
+/*ul list ¿Cómo enfrentamos estos desafíos?*/
+.golden-list {
+    list-style-type: none; /* Quita las viñetas por defecto */
+    padding-left: 0; /* Elimina el padding izquierdo */
+}
+
+.golden-list li {
+    margin-bottom: 15px; /* Añade espacio entre los elementos de la lista */
+    background: linear-gradient(45deg, #FFD700, #FFEC8B); /* Fondo dorado brillante */
+    padding: 10px; /* Espaciado interno */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.7); /* Sombra dorada */
+}
+
+.golden-list li strong {
+    color: #DAA520; /* Color dorado oscuro para el texto en negrita */
+}
