@@ -355,3 +355,96 @@ section#sobre-nosotros p {
     text-align: center;
     margin-bottom: 15px;
 }
+
+.def-content {
+    display: flex;
+    align-items: flex-start; /* Alinea el contenido al principio */
+    gap: 25px; /* Espacio entre la imagen y el texto */
+}
+
+.align-left {
+    width: 375px; /* Ajusta el ancho de la imagen según sea necesario */
+    flex-shrink: 0; /* Evita que la imagen se reduzca al tamaño del contenido */
+}
+
+.def-text {
+    color: white; /* Color del texto */
+    flex: 1; /* Hace que el texto ocupe todo el espacio restante */
+}
+
+.def-text p, .def-text ul {
+    margin: 0 0 10px 0; /* Margen para los párrafos y listas */
+}
+
+
+.content-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.align-left {
+    width: 350px;
+    flex-shrink: 0;
+}
+
+.text-content {
+    color: white;
+    flex: 1;
+}
+
+.text-content p, .text-content ul {
+    margin: 0 0 10px 0;
+}
+
+.text-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.text-content strong {
+    font-weight: bold;
+}
+
+
+
+
+#tendencias {
+    padding: 20px;
+}
+
+.tendencias-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tendencias-img {
+    max-width: 555px; /* Ajusta el tamaño de la imagen según sea necesario */
+    margin-right: 20px;
+}
+
+.tendencias-content {
+    max-width: calc(100% - 220px); /* Ajusta el tamaño máximo del contenedor para dejar espacio para la imagen */
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+ul ul {
+    list-style-type: circle;
+}
+
+ul li, p {
+    color: white;
+    margin-bottom: 10px;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+
+
