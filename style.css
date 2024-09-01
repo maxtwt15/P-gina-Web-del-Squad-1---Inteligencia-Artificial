@@ -609,3 +609,12 @@ h2.gradient-gold {
 .golden-list li strong {
     color: #DAA520; /* Color dorado oscuro para el texto en negrita */
 }
+
+
+main h5 {
+    font-size: 1.5em;
+    color: #ffcc00;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
