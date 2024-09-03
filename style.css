@@ -16,7 +16,7 @@ p {
 .simple-tech-title {
     font-family: 'Orbitron', sans-serif;
     font-size: 42px;
-    color: #2C2C2C; /* Gris oscuro para buen contraste */
+    color: whitesmoke; /* Gris oscuro para buen contraste */
     text-align: center;
     font-weight: bold; /* Negrita */
     margin-top: 20px;
@@ -58,10 +58,28 @@ body {
 
 
 header {
-    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #000; /* Color de fondo negro */
+    color: #fff; /* Color del texto blanco */
+    padding: 20px; /* Espaciado interior */
+    text-align: center; /* Centra el contenido */
+    border-bottom: 3px solid #333; /* Borde inferior gris oscuro para un toque elegante */
+}
+
+.header-title {
+    font-size: 36px; /* Tamaño de fuente grande para el título */
+    margin: 0; /* Elimina el margen predeterminado */
+    font-weight: 700;
+    color: white; /* Peso de fuente negrita */
+}
+
+.banner-container {
+    margin-top: 20px; /* Espacio encima del contenedor del banner */
+}
+
+.banner-img {
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 8px; /* Bordes redondeados para la imagen */
 }
 
 .banner-container {
@@ -98,9 +116,10 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 
+/* Estilos básicos para los elementos de navegación */
 nav ul li {
     margin: 0 15px;
 }
@@ -111,13 +130,84 @@ nav ul li a {
     font-weight: bold;
     padding: 5px 10px;
     border-radius: 5px;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Necesario para aplicar transformaciones */
 }
 
 nav ul li a:hover {
     background: var(--text-color);
     color: var(--background-color);
+    transform: scale(1.1); /* Aumenta el tamaño del enlace ligeramente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar un efecto de elevación */
 }
+
+
+/*navegacion en el submenu*/
+
+/* Estilos básicos para los elementos de navegación */
+nav ul {
+    list-style-type: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el relleno predeterminado */
+    margin: 0; /* Elimina el margen predeterminado */
+    display: flex; /* Disposición en fila */
+}
+
+nav ul li {
+    position: relative; /* Necesario para el submenú */
+    margin: 0 15px; /* Espaciado entre elementos de lista */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff; /* Color del texto en blanco */
+    font-weight: bold;
+    font-size: 16px; /* Tamaño de fuente ajustado */
+    padding: 10px 20px; /* Espaciado interior para un tamaño adecuado */
+    border-radius: 5px; /* Bordes redondeados */
+    background-color: #33333300; /* Color de fondo predeterminado */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block; /* Asegura que el enlace tenga un tamaño adecuado */
+}
+
+nav ul li a:hover {
+    background: #ffffff; /* Fondo al pasar el cursor */
+    color: #333333; /* Color del texto al pasar el cursor */
+    transform: scale(1.1); /* Aumenta ligeramente el tamaño */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Estilos para el submenú */
+nav ul li .submenu {
+    display: none; /* Oculta el submenú por defecto */
+    position: absolute; /* Posiciona el submenú en relación al elemento padre */
+    top: 100%; /* Coloca el submenú justo debajo del elemento padre */
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo semitransparente */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 0; /* Espaciado interior */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+    z-index: 1000; /* Asegura que el submenú esté encima de otros elementos */
+}
+
+nav ul li .submenu li {
+    margin: 0; /* Elimina el margen de los elementos del submenú */
+}
+
+nav ul li .submenu li a {
+    color: #ffffff; /* Color del texto en el submenú */
+    padding: 10px 20px; /* Espaciado interior */
+    display: block; /* Asegura que el enlace ocupe el ancho completo del elemento */
+}
+
+nav ul li .submenu li a:hover {
+    background-color: #444444; /* Fondo del enlace al pasar el cursor */
+}
+
+/* Mostrar el submenú al pasar el cursor sobre el elemento de lista */
+nav ul li:hover .submenu {
+    display: block; /* Muestra el submenú */
+}
+
 
 main {
     padding: 20px;
@@ -309,6 +399,10 @@ section#sobre-nosotros p {
     line-height: 1.8;
 }
 
+
+/*newsletter*/
+
+/* Estilos generales del formulario de newsletter */
 #newsletter {
     background: #2a2a2a;
     padding: 200px;
@@ -326,7 +420,7 @@ section#sobre-nosotros p {
 
 .newsletter-form input[type="email"] {
     padding: 10px;
-    font-size: 1.2em; /* Aumenta el tamaño de la fuente en el campo de entrada */
+    font-size: 1.2em;
     border-radius: 5px;
     border: 1px solid var(--primary-color);
     margin-bottom: 10px;
@@ -336,7 +430,7 @@ section#sobre-nosotros p {
 
 .newsletter-form button {
     padding: 10px 20px;
-    font-size: 1.2em; /* Aumenta el tamaño de la fuente en el botón */
+    font-size: 1.2em;
     color: var(--background-color);
     background-color: var(--primary-color);
     border: none;
@@ -350,7 +444,7 @@ section#sobre-nosotros p {
 }
 
 #newsletter h4 {
-    font-size: 4.3em; /* Aumenta el tamaño de la fuente del título */
+    font-size: 4.3em;
     color: var(--primary-color);
     text-align: center;
     margin-bottom: 15px;
@@ -618,3 +712,529 @@ main h5 {
     text-align: center;
 }
 
+/* titulo La IA: Un Viaje al Corazón de la Revolución Tecnológica*/
+
+.gradient-blue {
+    background: linear-gradient(45deg, #1E90FF, #00BFFF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+
+/* imagen La IA: Un Viaje al Corazón de la Revolución Tecnológica*/
+
+.image-section {
+    display: flex;
+    align-items: flex-start;
+}
+
+.section-image {
+    margin-top: 135px; /* Ajusta el valor para mover la imagen más abajo */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+}
+
+.section-content {
+    margin-left: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+.gradient-sandy-brown {
+    background: linear-gradient(45deg, #F4A460, #8B4513);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.box-list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.box-list li {
+    margin-bottom: 10px;
+}
+
+
+
+/* titulo Un Futuro Brillante: Las Promesas de la IA*/
+
+.gradient-sandy-brown {
+    background: linear-gradient(45deg, #F4A460, #8B4513);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* titulo Un Futuro Ético y Sostenible*/
+
+.gradient-green {
+    background: linear-gradient(45deg, #32CD32, #C0C0C0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.color-label {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/*ul list Un Futuro Ético y Sostenible*/
+
+.green-list {
+    color: #32CD32; /* Color verde para la lista */
+    list-style-type: disc; /* Opcional: Estilo del marcador de la lista */
+}
+
+.green-list li {
+    margin-bottom: 10px; /* Espacio entre los elementos de la lista */
+}
+
+.green-text {
+    color: #32CD32; /* Color verde para el texto dentro de <strong> */
+}
+
+
+/* titulo Los Desafíos de la IA: Un Lado de la Moneda*/
+
+.gradient-yellow {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* img titulo Los Desafíos de la IA: Un Lado de la Moneda*/
+
+
+.challenges-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center; /* Centra el texto dentro del h2 */
+}
+
+.gradient-yellow {
+    margin-bottom: 45px; /* Ajusta este valor para reducir el espacio entre el h2 y la imagen */
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+.section-image {
+    margin-top: 0; /* Ajusta este valor si es necesario para ajustar el espacio arriba de la imagen */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    height: auto;
+}
+
+.section-content {
+    margin-top: 20px; /* Espacio entre la imagen y el contenido */
+}
+
+.box-list {
+    list-style-type: disc;
+    padding-left: 20px;
+    text-align: left; /* Mantiene la alineación del texto en la lista a la izquierda */
+}
+
+.box-list li {
+    margin-bottom: 10px;
+}
+
+/*Caja de comentarios*/
+
+.comment-section {
+    background: #f0f4f8; /* Fondo gris claro */
+    padding: 25px;
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombra profunda */
+    max-width: 600px; /* Ancho máximo */
+    margin: 30px auto; /* Espacio alrededor y centrado horizontalmente */
+    border: 1px solid #d9e2ec; /* Borde gris claro */
+}
+
+.comment-section h2 {
+    font-size: 28px; /* Tamaño de fuente grande */
+    margin-bottom: 25px; /* Espacio debajo del título */
+    color: #0056b3; /* Color azul intenso */
+    text-align: center; /* Centra el título */
+    font-weight: 700; /* Peso de fuente negrita */
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section textarea {
+    width: 100%;
+    height: 150px; /* Altura ajustada */
+    padding: 15px; /* Relleno interior amplio */
+    border: 1px solid #b0bec5; /* Borde gris claro */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente para leer cómodamente */
+    font-family: Arial, sans-serif; /* Fuente Arial para el texto */
+    resize: vertical; /* Permite redimensionar verticalmente */
+    margin-bottom: 20px; /* Espacio debajo del textarea */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total del elemento */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+.comment-section textarea:focus {
+    border-color: #0056b3; /* Color de borde azul al enfocar */
+    box-shadow: 0 0 8px rgba(0, 86, 179, 0.2); /* Sombra azul sutil al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+.comment-section button {
+    background-color: #0056b3; /* Color azul del botón */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 12px 24px; /* Relleno amplio */
+    border-radius: 8px; /* Bordes redondeados */
+    font-size: 16px; /* Tamaño de fuente para el botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-family: Arial, sans-serif; /* Fuente Arial para el texto del botón */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Transiciones suaves */
+}
+
+.comment-section button:hover {
+    background-color: #003d7a; /* Azul más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Efecto de elevación */
+}
+
+/* Estilos básicos para el contenedor y la lista */
+.comment-section {
+    padding: 20px; /* Espaciado interior del contenedor */
+    background-color: #f9f9f9; /* Color de fondo del contenedor */
+    border-radius: 8px; /* Bordes redondeados para el contenedor */
+}
+
+
+/* Estilos para el formulario de newsletter en Tendencias futuras.html */
+#newsletter-tendencias {
+    background: #333; /* Cambia el color de fondo si es necesario */
+    padding: 60px; /* Ajusta el padding según sea necesario */
+    padding-top: 100px; /* Aumenta el padding-top para alejar el contenido de la parte superior */
+    margin: 40px 0;
+    border-radius: 8px; /* Ajusta el radio del borde si es necesario */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    margin-top: 100px;
+}
+
+.newsletter-form-tendencias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.newsletter-form-tendencias input[type="email"] {
+    padding: 12px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #00aaff; /* Cambia el color del borde si es necesario */
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter-form-tendencias button {
+    padding: 12px 24px;
+    font-size: 1em;
+    color: #fff; /* Cambia el color del texto si es necesario */
+    background-color: #00aaff; /* Cambia el color de fondo si es necesario */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form-tendencias button:hover {
+    background-color: #0077cc; /* Cambia el color de fondo en hover si es necesario */
+}
+
+#newsletter-tendencias h4 {
+    font-size: 2.5em; /* Ajusta el tamaño del título según sea necesario */
+    color: #00aaff; /* Cambia el color del texto si es necesario */
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+
+
+
+/*Definición y alcance*/
+
+/* img Definición y alcance*/
+
+.uniform-image {
+    width: 550px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    max-width: 100%; /* Asegura que la imagen no se salga de su contenedor */
+    display: block; /* Elimina el espacio debajo de la imagen */
+    margin: 10px auto; /* Centra la imagen y añade un margen vertical si es necesario */
+}
+
+
+/* Estilos para el formulario de newsletter en def.html */
+
+#newsletter-def {
+    background: #2a2a2a;
+    padding: 100px; /* Ajusta el padding si es necesario */
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form-def {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.newsletter-form-def input[type="email"] {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter-form-def button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form-def button:hover {
+    background-color: var(--secondary-color);
+}
+
+#newsletter-def h4 {
+    font-size: 2em; /* Ajusta el tamaño del título según sea necesario */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/*Historia y desarrollo*/
+
+/* Estilo para todas las imágenes con la clase hist-image */
+.hist-image {
+    width: 550px; /* Ajusta el ancho deseado */
+    height: 350px; /* Ajusta el alto deseado */
+    object-fit: cover; /* Asegura que las imágenes se recorten adecuadamente para ajustarse al tamaño */
+    margin-bottom: 20px; /* Espacio entre imágenes, si es necesario */
+    border-radius: 8px; /* Opcional: bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Opcional: sombra suave */
+}
+
+
+/*contenedor de videos*/
+.video-hist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0; /* Espacio arriba y abajo del video, ajusta si es necesario */
+}
+
+.video-hist iframe {
+    max-width: 100%; /* Asegura que el iframe se ajuste al tamaño del contenedor */
+    height: 400px; /* Ajusta la altura del iframe según tu preferencia */
+}
+
+
+/* Estilos para el formulario de newsletter en his.html */
+
+#newsletter-his {
+    background: #2a2a2a;
+    padding: 100px; /* Ajusta el padding si es necesario */
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form-his {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.newsletter-form-his input[type="email"] {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter-form-his button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form-his button:hover {
+    background-color: var(--secondary-color);
+}
+
+#newsletter-his h4 {
+    font-size: 2em; /* Ajusta el tamaño del título según sea necesario */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/*Aplicaciones actuales y tipos de IA*/
+
+/* Estilo para todas las imágenes con la clase apli-image */
+.image-container {
+    text-align: center; /* Centra el contenido del contenedor */
+    margin: 20px 0; /* Espacio arriba y abajo de cada contenedor, ajusta si es necesario */
+}
+
+.apli-image {
+    width: 550px; /* Ajusta el ancho según tu preferencia */
+    height: auto; /* Ajusta la altura según tu preferencia */
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente para ajustarse al tamaño */
+    display: inline-block; /* Asegura que la imagen se comporte como un bloque en línea para el centrado */
+}
+
+/* Estilos para el formulario de newsletter en apli.html */
+#newsletter-apli {
+    background: #2a2a2a;
+    padding: 100px; /* Ajusta el padding si es necesario */
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form-apli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.newsletter-form-apli input[type="email"] {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter-form-apli button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form-apli button:hover {
+    background-color: var(--secondary-color);
+}
+
+#newsletter-apli h4 {
+    font-size: 2em; /* Ajusta el tamaño del título según sea necesario */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+/*Impacto social y ético*/
+
+/* Estilo para todas las imágenes con la clase imp-image */
+
+.imp-images {
+    width: 550px; /* Ajusta el ancho según tu preferencia */
+    height: auto; /* Ajusta la altura según tu preferencia */
+    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente para ajustarse al tamaño */
+    display: block; /* Para centrar la imagen más fácilmente */
+    margin: 0 auto; /* Centra la imagen dentro de su contenedor */
+}
+
+
+/* Estilos para el formulario de newsletter en imp.html */
+#newsletter-imp {
+    background: #2a2a2a;
+    padding: 100px; /* Ajusta el padding si es necesario */
+    margin: 40px 0;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.newsletter-form-imp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.newsletter-form-imp input[type="email"] {
+    padding: 10px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.newsletter-form-imp button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: var(--background-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter-form-imp button:hover {
+    background-color: var(--secondary-color);
+}
+
+#newsletter-imp h4 {
+    font-size: 2em; /* Ajusta el tamaño del título según sea necesario */
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 15px;
+}
