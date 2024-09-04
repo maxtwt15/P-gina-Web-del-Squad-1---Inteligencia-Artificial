@@ -1238,3 +1238,33 @@ main h5 {
     text-align: center;
     margin-bottom: 15px;
 }
+
+
+/*Sobre nosotros h1*/
+.distinta-sobre-nosotros-letter {
+    font-size: 36px;
+    color: #FF0000;
+    background: linear-gradient(45deg, #FF0000, #800000);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.7);
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+
+.sobre-nosotros-image {
+    border-radius: 50%; /* Borde redondeado */
+    margin-right: 20px;
+    border: 3px solid rgba(255, 255, 255, 0); /* Puedes ajustar el color y grosor del borde */
+}
+
+.sobre-nosotros-text {
+    max-width: 600px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+
+
