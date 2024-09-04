@@ -30,7 +30,6 @@ El proyecto está organizado en los siguientes archivos y directorios:
 Créditos
 HTML por: Jesús GL
 CSS y JavaScript: 𝗠𝗮𝘅ッ
-Colaboradores: Violeta GA
 
 Licencia
 Este proyecto es de código abierto bajo la licencia MIT. Puedes utilizarlo y modificarlo libremente siempre y cuando respetes los términos de la licencia.
